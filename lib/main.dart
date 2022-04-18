@@ -55,6 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
     Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ProfilePage()));
   }
 
+  void helloWorld() {
+    print('Hello');
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
