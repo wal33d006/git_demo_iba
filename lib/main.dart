@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:git_demo_iba/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -50,6 +51,10 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  void _navigate() {
+    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const ProfilePage()));
+  }
+
   void helloWorld() {
     print('Hello');
   }
@@ -99,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: helloWorld,
+        onPressed: _navigate,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
